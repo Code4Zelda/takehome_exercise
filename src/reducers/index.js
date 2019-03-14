@@ -9,12 +9,14 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    // call the fetch action
     case actionTypes.FETCH_CATS: {
       return {
         ...state,
         urls: action.payload.data
       }
     }
+    // function to call the increment 
     case actionTypes.INCREMENT:{
       let index = state.index
       if (index >= 4){
@@ -32,6 +34,7 @@ export default (state = initialState, action) => {
       }
     }
 
+    // function to call the 
     case actionTypes.DECREMENT:{
       let index = state.index;
       if (state.index <= 0) {
